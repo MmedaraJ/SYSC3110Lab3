@@ -27,6 +27,7 @@ public class AddressBook
                 "2000-01-12", "20, Rich Road");
 
         addressBook.addBuddy(buddy0);
+        addressBook.removeBuddy(buddy0);
 
         System.out.println("Address Book");
     }
