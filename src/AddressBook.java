@@ -11,24 +11,30 @@ public class AddressBook
 
     public void addBuddy(BuddyInfo buddy)
     {
-        addressBook.add(buddy);
+        if(buddy != null)
+        {
+            addressBook.add(buddy);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddy)
+    public BuddyInfo removeBuddy(int index)
     {
-        addressBook.remove(buddy);
+        if(index >= 0 && index < addressBook.size())
+        {
+            return addressBook.remove(index);
+        }
+        return null;
     }
 
     public static void main(String[] args)
     {
         AddressBook addressBook = new AddressBook();
-
         BuddyInfo buddy0 = new BuddyInfo("John", 123456789,
                 "2000-01-12", "20, Rich Road");
-
+        BuddyInfo buddy1 = new BuddyInfo("John", 123456789,
+                "2000-01-12", "20, Rich Road");
         addressBook.addBuddy(buddy0);
-        addressBook.removeBuddy(buddy0);
-
-        System.out.println("Address Book");
+        addressBook.addBuddy(buddy1);
+        addressBook.removeBuddy(0);
     }
 }
