@@ -1,5 +1,5 @@
 
-
+//commenting here because i am too lazy
 public class BuddyInfo
 {
     private String name = "";
