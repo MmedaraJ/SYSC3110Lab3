@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+//This is the class i am using to test my github
 public class AddressBook
 {
     private ArrayList<BuddyInfo> addressBook;
